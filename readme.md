@@ -65,19 +65,47 @@ luego:
 
 ```http
 USERS | GET http://localhost:3000/api/users
+
+#
+  output: [
+	{
+		"id": 1,
+		"name": "John Doe 1"
+	},
+	{
+		"id": 2,
+		"name": "John Doe 2"
+	}
+]
 ```
 
 ```http
   PRODUCTS | GET http://localhost:3000/api/products
+  #
+  output: [
+	{
+		"id": 101,
+		"name": "Laptop"
+	} 
+]
 ```
 
 ```http
   GRPC | GET http://localhost:3000/api/gprc
+    #
+  output: {
+	"message": "Respuesta desde gRP"
+    }
 ```
 
 ```http
-  DEMO | GET http://localhost:3000/api/messsageFromBack
+  DEMO | GET http://localhost:3000/api/demo
+  #
+  output: {
+	"message": "Demo services from Microservices Architecture"
+    }
 ```
+
 
 
 ## Authors

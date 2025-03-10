@@ -8,7 +8,13 @@ app.use(helmet());
 app.use(cors({ origin: 'http://localhost:3000' }));
 
 app.get('/products', (req, res) => {
-    res.json([{ id: 101, name: 'Laptop' }]);
+    res.json([
+        { id: 101, name: 'Laptop' },
+        { id: 102, name: 'Mouse' },
+        { id: 103, name: 'Keyboard' },
+        { id: 105, name: 'Monitor' },
+        { id: 106, name: 'Lamp' }
+    ]);
 });
 
 app.listen(5002, () => console.log('Products service on http://localhost:5002'));

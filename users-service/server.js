@@ -10,7 +10,10 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 app.get('/users', (req, res) => {
     res.json([
         { id: 1, name: 'John Doe 1' },
-        { id: 2, name: 'John Doe 2' }
+        { id: 2, name: 'John Doe 2' },
+        { id: 3, name: 'John Doe 3' },
+        { id: 4, name: 'John Doe 5' },
+        { id: 5, name: 'John Doe 6' }
     ]);
 });
 
