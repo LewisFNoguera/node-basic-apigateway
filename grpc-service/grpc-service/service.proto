@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package service;
+
+service ExampleService {
+    rpc GetData (Empty) returns (Response);
+}
+
+message Empty {}
+
+message Response {
+    string message = 1;
+}
