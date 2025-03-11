@@ -5,11 +5,11 @@ const logger = require('../config/logger');
 
 router.get('/', async (req, res) => {
     try {
-        logger.info('🚀 Calling gRPC service through Circuit Breaker');
+        logger.info('Calling gRPC service through Circuit Breaker');
         const response = await grpcBreaker.fire();
         res.json(response);
     } catch (error) {
-        logger.error('❌ Circuit Breaker FAILURE: gRPC Service unavailable');
+        logger.error('Circuit Breaker FAILURE: gRPC Service unavailable');
         res.status(503).json({ error: 'gRPC Service unavailable' });
     }
 });

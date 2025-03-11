@@ -8,7 +8,7 @@ const proxyRequest = (req, res, target) => {
   return new Promise((resolve, reject) => {
     proxy.web(req, res, { target }, (err) => {
       if (err) {
-        logger.error(`❌ Proxy error: ${err.message}`);
+        logger.error(`Proxy error: ${err.message}`);
         reject(new Error('Microservice unavailable'));
       }
     });
@@ -26,7 +26,7 @@ const proxyRequest = (req, res, target) => {
           setCache(req.originalUrl, data); // Guardamos en caché
           resolve();
         } catch (error) {
-          logger.error(`❌ Error parsing response: ${error.message}`);
+          logger.error(`Error parsing response: ${error.message}`);
           reject(error);
         }
       });
