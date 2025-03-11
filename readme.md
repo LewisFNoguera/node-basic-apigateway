@@ -7,7 +7,7 @@ En esta práctica se utilizó:
 - RateLimit
 - Cache con Node-Cache
 
-**api-gateway:** Contiene el backend princial o mediador.
+**api-gateway:** Contiene el backend principal o enrutador (Cors habilitado *).
 
 **user-service:** Microservicio básico que envia una REST con un array de usuarios.
 
